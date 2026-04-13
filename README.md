@@ -25,3 +25,23 @@ git commit -m"feat: information about what i do"
 ### Then we can push with:
 ```
 git push
+```
+
+```mermaid
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    branch feature
+    checkout feature
+    commit
+    checkout develop
+    merge feature
+    checkout main
+    merge develop
