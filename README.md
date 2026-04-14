@@ -1,5 +1,5 @@
 # DEVOPS
-# How can i install in git block
+# How can i install  git block
 Using winget tool
 Install winget tool if you don't already have it, then type this command in command prompt or Powershell.
 winget install --id Git.Git -e --source wingeto
@@ -26,6 +26,18 @@ git commit -m"feat: information about what i do"
 ```
 git push
 ```
+
+## Git Commands Cheat Sheet
+
+| Action                     | Command                                      | Description                                  |
+|----------------------------|----------------------------------------------|----------------------------------------------|
+| Create a new branch        | `git checkout -b <branch-name>`              | Creates and switches to a new branch         |
+| Add file(s) to staging     | `git add <filename>`                         | Stages specific file(s) for commit           |
+|                            | `git add .`                                  | Stages all changes (new, modified, deleted)  |
+| Commit changes             | `git commit -m "feat: description"`          | Commits staged changes with a message        |
+| Push changes to remote     | `git push`                                   | Pushes committed changes to remote branch    |
+|                            | `git push -u origin <branch-name>`           | Pushes and sets upstream for new branch      |
+
 
 ```mermaid
 gitGraph
