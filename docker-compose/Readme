@@ -1,5 +1,8 @@
 # LAMP Stack with Docker Compose
 
-## Architecture image
+## Architecture Diagram
 
-![LAMP Stack](https://raw.githubusercontent.com/ajrutaha/DEVOPS/docker-compose/docker-compose/lamp.jpg)
+![LAMP Docker Stack](lamp.jpg)
+
+## Docker Compose Configuration
+...
