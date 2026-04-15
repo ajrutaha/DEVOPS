@@ -1,0 +1,33 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: company
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+  php:
+    build: ./php
+    container_name: php_service
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+  apache:
+    image: httpd:2.4
+    container_name: apache_server
+    ports:
+      - "88:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./apache/vhost.conf:/usr/local/apache2/conf/extra/httpd-vhosts.conf
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php
+volumes:
+  db_data:
+
