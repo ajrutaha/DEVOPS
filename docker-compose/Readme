@@ -1,0 +1,5 @@
+# LAMP Stack with Docker Compose
+
+## Architecture image
+
+![LAMP Docker Stack Architecture](docker-compose/lamp.jpg)
